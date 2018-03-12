@@ -1,0 +1,6 @@
+logfile
+tester/__pycache__/
+tester/migrations/__pycache__/
+colourtester/*.pyc
+colourtester/__pycache__/
+colourtester/settings/__pycache__/

@@ -1,0 +1,1 @@
+An application for trying out hex colour combinations.
