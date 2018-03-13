@@ -8,6 +8,23 @@
         <link rel="stylesheet" type="text/css" href="{% static 'tester/style.css' %}">
     </head>
     <body>
-        {{ form.as_p }}
+        <div class="combo-form">
+            <div class="combo-block">
+                <label for="id_bgcolour_one">Background</label>
+                <div>{{ form.bgcolour_one }}</div>
+                <label for="id_textcolour_one">Text</label>
+                <div>{{ form.textcolour_one }}</div>
+            </div>
+            <div class="combo-block">
+                <label for="id_bgcolour_two">Background</label>
+                <div>{{ form.bgcolour_two }}</div>
+                <label for="id_textcolour_two">Text</label>
+                <div>{{ form.textcolour_two }}</div>
+            </div>
+        </div>
+        <div class="combo">
+            <div class="combo-block" style="background: {{ form.bgcolour_one.value }}; color: {{ form.textcolour_one.value }}">{{ form.textcolour_one.value }}</div>
+            <div class="combo-block" style="background: {{ form.bgcolour_two.value }}; color: {{ form.textcolour_two.value }}">{{ form.textcolour_two.value }}</div>
+        </div>
     </body>
 </html>

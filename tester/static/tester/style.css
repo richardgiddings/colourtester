@@ -1,14 +1,49 @@
 * { box-sizing: border-box; }
 
-.combo {
-    border: 2px solid black;
-    margin-bottom: 2px;
-    overflow: hidden;        
+body {
+    font-family: Helvetica, Times, serif;
+    font-size: 62.5%;
 }
-.combo-colour {
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.8em;
+}
+input {
+    font-size: 1.8em;
+    width: 100%;
+    text-align: center;
+}
+
+.combo {
+    margin-bottom: 2px;
+    overflow: hidden;
+    font-size: 1.8em;        
+}
+a > .combo:hover {
+    opacity: 0.8;
+}
+.combo-block {
     display: block;
     float: left;
     width: 50%;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
+}
+
+.combo-form {
+    overflow: hidden;
+}
+
+#create-button {
+    font-size: 1.8em;
+    background: #BABCBD;
+    height: 40px;
+    width: 100%;
+    margin: 20px 0px;
+}
+#create-button:hover {
+    background: #DEE0E1;
+    cursor: pointer;
 }
