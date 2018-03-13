@@ -8,13 +8,15 @@
         <link rel="stylesheet" type="text/css" href="{% static 'tester/style.css' %}">
     </head>
     <body>
-        <a href="{% url 'combo' %}">New Combo</a>
+        <a href="{% url 'add_combo' %}">New Combo</a>
         <div id="combos">
         {% for combo in combos %}
+            <a href="{% url 'edit_combo' combo.id %}">
             <div class="combo">
                 <span class="combo-colour" style="background: {{ combo.bgcolour_one }}; color: {{ combo.textcolour_one }}">{{ combo.textcolour_one }}</span>
                 <span class="combo-colour" style="background: {{ combo.bgcolour_two }}; color: {{ combo.textcolour_two }}">{{ combo.textcolour_two }}</span>
             </div>
+            </a>
         {% endfor %}
         </div>
     </body>
