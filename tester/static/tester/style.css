@@ -3,6 +3,7 @@
 body {
     font-family: Helvetica, Times, serif;
     font-size: 62.5%;
+    margin-top: 20px;
 }
 
 label {
@@ -14,6 +15,10 @@ input {
     font-size: 1.8em;
     width: 100%;
     text-align: center;
+}
+
+#combos {
+    margin-top: 20px;
 }
 
 .combo {
@@ -34,16 +39,28 @@ a > .combo:hover {
 
 .combo-form {
     overflow: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
-#create-button {
+.combo-form-buttons {
+    clear: both;
+}
+.combo-form-button {
+    width: 100%;
+}
+.create-button {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+button {
     font-size: 1.8em;
     background: #BABCBD;
     height: 40px;
-    width: 100%;
-    margin: 20px 0px;
+    margin-top: 10px;
 }
-#create-button:hover {
+button:hover {
     background: #DEE0E1;
     cursor: pointer;
 }

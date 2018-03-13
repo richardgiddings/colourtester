@@ -21,10 +21,23 @@
                 <label for="id_textcolour_two">Text</label>
                 <div>{{ form.textcolour_two }}</div>
             </div>
+            <div class="combo-form-buttons">
+                <button type="submit" class="combo-form-button">Apply</button>
+                <button type="submit" class="combo-form-button">Save</button>
+                <form action="{% url 'index' %}" method="get">
+                    <button type="submit" class="combo-form-button">Back</button>
+                </form>
+            </div>
         </div>
         <div class="combo">
             <div class="combo-block" style="background: {{ form.bgcolour_one.value }}; color: {{ form.textcolour_one.value }}">{{ form.textcolour_one.value }}</div>
             <div class="combo-block" style="background: {{ form.bgcolour_two.value }}; color: {{ form.textcolour_two.value }}">{{ form.textcolour_two.value }}</div>
         </div>
+
+        <script>
+        function changecolourone() {
+
+        }
+        </script>
     </body>
 </html>
