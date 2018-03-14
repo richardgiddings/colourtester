@@ -5,9 +5,21 @@ from django.contrib import messages
 
 from .models import ColourCombo
 from .forms import ColourComboForm
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def index(request):
     colour_combos = ColourCombo.objects.all().order_by('-created_at')
+
+    paginator = Paginator(colour_combos, 5) # Show n results per page
+    page = request.GET.get('page')
+    try:
+        colour_combos = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        colour_combos = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        colour_combos = paginator.page(paginator.num_pages)
 
     return render(request, template_name='tester/index.html',
                   context={'combos': colour_combos})

@@ -69,3 +69,23 @@ button:hover {
     background: #DEE0E1;
     cursor: pointer;
 }
+
+.pagination {
+    clear: both;
+    margin-top: 40px;
+    text-align: center;
+    border-top: 4px solid #BABCBD;
+    padding-top: 10px;
+}
+.pagination > li {
+    font-size: 1.4em;
+    list-style-type: none;
+    display: inline;
+    padding-right: 16px; 
+}
+li > a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6em;
+}
+
