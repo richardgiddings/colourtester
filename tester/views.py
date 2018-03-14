@@ -6,7 +6,7 @@ from .models import ColourCombo
 from .forms import ColourComboForm
 
 def index(request):
-    colour_combos = ColourCombo.objects.all()
+    colour_combos = ColourCombo.objects.all().order_by('-created_at')
 
     return render(request, template_name='tester/index.html',
                   context={'combos': colour_combos})
