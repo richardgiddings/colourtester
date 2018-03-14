@@ -51,6 +51,14 @@ a > .combo:hover {
     margin: auto;
     width: 100%;
 }
+
+#error-message > ul {
+    font-size: 1.8em;
+    color: red;
+    list-style: none;
+}
+
+
 button {
     font-size: 1.8em;
     background: #BABCBD;
