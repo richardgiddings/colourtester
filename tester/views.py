@@ -28,8 +28,9 @@ def add_combo(request):
     if request.method == "POST":
         form = ColourComboForm(request.POST)
         if form.is_valid():
-            form.save()
-            return HttpResponseRedirect(reverse('index'))
+            if request.POST.get("save-button"):
+                form.save()
+                return HttpResponseRedirect(reverse('index'))
     else:
         form = ColourComboForm()
 
@@ -41,8 +42,9 @@ def edit_combo(request, combo_id):
     if request.method == "POST":
         form = ColourComboForm(request.POST, instance=combo)
         if form.is_valid():
-            form.save()
-            return HttpResponseRedirect(reverse('index'))
+            if request.POST.get("save-button"):
+                form.save()
+                return HttpResponseRedirect(reverse('index'))
     else:
         form = ColourComboForm(instance=combo)
         
