@@ -26,14 +26,14 @@
                     <div>{{ form.textcolour_two }}</div>
                     <div id="error-message">{{ form.errors.textcolour_two }}</div>
                 </div>
-                <button type="submit" class="combo-form-button-half" name="apply-button" value="apply">Apply</button>
-                <button type="submit" class="combo-form-button-half" name="save-button" value="save">Save</button>
-                {% if not add %}
-                <button type="submit" class="combo-form-button-half" name="delete-button" value="delete">Delete</button>
-                {% endif %}
-            </form>
-            <form action="{% url 'index' %}" method="get">
-                <button type="submit" class="combo-form-button-half">Back</button>
+                <div class="combo-form-buttons">
+                    <button type="submit" class="combo-form-button" name="apply-button" value="apply">Apply</button>
+                    <button type="submit" class="combo-form-button" name="save-button" value="save">Save</button>
+                    {% if not add %}
+                    <button type="submit" class="combo-form-button" name="delete-button" value="delete">Delete</button>
+                    {% endif %}
+                    <button type="submit" class="combo-form-button" name="back-button" value="delete">Back</button>
+                </div>
             </form>
         </div>
         <div class="combo">

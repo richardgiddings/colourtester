@@ -51,10 +51,10 @@ a > .combo:hover {
     padding-bottom: 20px;
 }
 
-.combo-form-button-full {
-    width: 100%;
+.combo-form-buttons {
+    clear: both;
 }
-.combo-form-button-half {
+.combo-form-button {
     float: left;
     width: 50%;
 }
