@@ -10,7 +10,7 @@ import dj_database_url
 env = os.environ.copy()
 SECRET_KEY = env['SECRET_KEY']
 ALLOWED_HOSTS = ['*']
-DEBUG = True
+DEBUG = False
 
 # Update database configuration with $DATABASE_URL.
 db_from_env = dj_database_url.config()
