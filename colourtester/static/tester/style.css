@@ -33,7 +33,15 @@ a > .combo:hover {
     display: block;
     float: left;
     width: 50%;
-    padding: 40px;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.form-combo-block {
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 10px;
     text-align: center;
 }
 
@@ -43,8 +51,12 @@ a > .combo:hover {
     padding-bottom: 20px;
 }
 
-.combo-form-button {
+.combo-form-button-full {
     width: 100%;
+}
+.combo-form-button-half {
+    float: left;
+    width: 50%;
 }
 .create-button {
     display: block;

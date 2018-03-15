@@ -10,7 +10,7 @@
     <body>
         <div class="combo-form">
             <form method="post">{% csrf_token %}
-                <div class="combo-block">
+                <div class="form-combo-block">
                     <label for="id_bgcolour_one">Background</label>
                     <div>{{ form.bgcolour_one }}</div>
                     <div id="error-message">{{ form.errors.bgcolour_one }}</div>
@@ -18,7 +18,7 @@
                     <div>{{ form.textcolour_one }}</div>
                     <div id="error-message">{{ form.errors.textcolour_one }}</div>
                 </div>
-                <div class="combo-block">
+                <div class="form-combo-block">
                     <label for="id_bgcolour_two">Background</label>
                     <div>{{ form.bgcolour_two }}</div>
                     <div id="error-message">{{ form.errors.bgcolour_two }}</div>
@@ -26,14 +26,14 @@
                     <div>{{ form.textcolour_two }}</div>
                     <div id="error-message">{{ form.errors.textcolour_two }}</div>
                 </div>
-                <button type="submit" class="combo-form-button" name="apply-button" value="apply">Apply</button>
-                <button type="submit" class="combo-form-button" name="save-button" value="save">Save</button>
+                <button type="submit" class="combo-form-button-half" name="apply-button" value="apply">Apply</button>
+                <button type="submit" class="combo-form-button-half" name="save-button" value="save">Save</button>
                 {% if not add %}
-                <button type="submit" class="combo-form-button" name="delete-button" value="delete">Delete</button>
+                <button type="submit" class="combo-form-button-half" name="delete-button" value="delete">Delete</button>
                 {% endif %}
             </form>
             <form action="{% url 'index' %}" method="get">
-                <button type="submit" class="combo-form-button">Back</button>
+                <button type="submit" class="combo-form-button-half">Back</button>
             </form>
         </div>
         <div class="combo">
