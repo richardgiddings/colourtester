@@ -24,7 +24,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django-heroku',
     'tester',
 ]
 
@@ -103,4 +102,5 @@ USE_L10N = True
 USE_TZ = True
 
 # Activate Django-Heroku.
+import django_heroku
 django_heroku.settings(locals())
