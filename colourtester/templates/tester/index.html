@@ -16,8 +16,8 @@
         {% for combo in combos %}
             <a href="{% url 'edit_combo' combo.id %}">
             <div class="combo">
-                <span class="combo-block" style="background: {{ combo.bgcolour_one }}; color: {{ combo.textcolour_one }}">{{ combo.textcolour_one }}</span>
-                <span class="combo-block" style="background: {{ combo.bgcolour_two }}; color: {{ combo.textcolour_two }}">{{ combo.textcolour_two }}</span>
+                <span class="combo-block index-combo-block" style="background: {{ combo.bgcolour_one }}; color: {{ combo.textcolour_one }}">{{ combo.textcolour_one }}</span>
+                <span class="combo-block index-combo-block" style="background: {{ combo.bgcolour_two }}; color: {{ combo.textcolour_two }}">{{ combo.textcolour_two }}</span>
             </div>
             </a>
         {% endfor %}

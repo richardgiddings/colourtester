@@ -10,7 +10,7 @@
     <body>
         <div class="combo-form">
             <form method="post">{% csrf_token %}
-                <div class="form-combo-block">
+                <div class="combo-block form-combo-block">
                     <label for="id_bgcolour_one">Background</label>
                     <div>{{ form.bgcolour_one }}</div>
                     <div id="error-message">{{ form.errors.bgcolour_one }}</div>
@@ -18,7 +18,7 @@
                     <div>{{ form.textcolour_one }}</div>
                     <div id="error-message">{{ form.errors.textcolour_one }}</div>
                 </div>
-                <div class="form-combo-block">
+                <div class="combo-block form-combo-block">
                     <label for="id_bgcolour_two">Background</label>
                     <div>{{ form.bgcolour_two }}</div>
                     <div id="error-message">{{ form.errors.bgcolour_two }}</div>
@@ -37,8 +37,8 @@
             </form>
         </div>
         <div class="combo">
-            <div class="combo-block" style="background: {{ form.bgcolour_one.value }}; color: {{ form.textcolour_one.value }}">{{ form.textcolour_one.value }}</div>
-            <div class="combo-block" style="background: {{ form.bgcolour_two.value }}; color: {{ form.textcolour_two.value }}">{{ form.textcolour_two.value }}</div>
+            <div class="combo-block combo-combo-block" style="background: {{ form.bgcolour_one.value }}; color: {{ form.textcolour_one.value }}">{{ form.textcolour_one.value }}</div>
+            <div class="combo-block combo-combo-block" style="background: {{ form.bgcolour_two.value }}; color: {{ form.textcolour_two.value }}">{{ form.textcolour_two.value }}</div>
         </div>
     </body>
 </html>
