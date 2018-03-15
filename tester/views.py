@@ -35,7 +35,7 @@ def add_combo(request):
         form = ColourComboForm()
 
     return render(request, template_name='tester/combo.html',
-                  context={'form': form})
+                  context={'form': form, 'add': True})
 
 def edit_combo(request, combo_id):
     combo = ColourCombo.objects.get(id=combo_id)
@@ -45,9 +45,12 @@ def edit_combo(request, combo_id):
             if request.POST.get("save-button"):
                 form.save()
                 return HttpResponseRedirect(reverse('index'))
+            if request.POST.get("delete-button"):
+                combo.delete()
+                return HttpResponseRedirect(reverse('index'))
     else:
         form = ColourComboForm(instance=combo)
         
 
     return render(request, template_name='tester/combo.html',
-                  context={'form': form})
+                  context={'form': form, 'add': False})
